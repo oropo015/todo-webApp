@@ -29,5 +29,5 @@ else:
             all_todos.remove(todo)
             write_todos(all_todos)
             del st.session_state[todo]
+            st.experimental_rerun()
 st.text_input(label=" ", placeholder="Add a todo....", on_change=add_todo, key="add_todo")
-st.session_state
